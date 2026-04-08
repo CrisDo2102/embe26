@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Birthday, My Love</title>
+    <meta name="description" content="Món quà sinh nhật nhỏ dành cho người mình yêu" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="bg-orb orb-1" aria-hidden="true"></div>
+    <div class="bg-orb orb-2" aria-hidden="true"></div>
+    <div class="bg-orb orb-3" aria-hidden="true"></div>
+    <div class="floating-hearts" aria-hidden="true"></div>
+
+    <header class="hero" id="top">
+      <div class="hero-overlay"></div>
+      <nav class="navbar-wrap">
+        <div class="navbar container">
+          <div class="logo">For My Love</div>
+          <div class="nav-links">
+            <a href="#timeline">Kỷ niệm</a>
+            <a href="#gallery">Ảnh</a>
+            <a href="#letter">Thư tay</a>
+            <a href="#playlist">Playlist</a>
+          </div>
+        </div>
+      </nav>
+
+      <div class="container hero-grid">
+        <div class="hero-text reveal">
+          <div class="hero-topline">
+            <span class="pill">Món quà sinh nhật dành riêng cho em</span>
+            <span class="pill subtle-pill" id="birthdayBadge">Ngày đặc biệt của em</span>
+          </div>
+
+          <h1 id="heroTitle">Happy Birthday, Bé Yêu 💖</h1>
+          <p class="hero-subtitle" id="heroSubtitle">
+            Một chiếc web nhỏ nhưng chứa rất nhiều điều anh muốn dành riêng cho em trong ngày đặc biệt nhất.
+          </p>
+          <p class="quote" id="loveQuote">
+            “Trong rất nhiều điều đẹp đẽ trên thế giới này, em là điều đẹp đẽ nhất đến với anh.”
+          </p>
+
+          <div class="hero-buttons">
+            <a class="btn btn-primary" href="#letter">Đọc thư của anh</a>
+            <a class="btn btn-secondary" href="#gallery">Xem ảnh tụi mình</a>
+          </div>
+
+          <div class="hero-mini-grid">
+            <div class="mini-card">
+              <span class="mini-label">Dành cho</span>
+              <strong id="forName">Bé nhà mình</strong>
+            </div>
+            <div class="mini-card">
+              <span class="mini-label">Từ</span>
+              <strong id="fromName">Anh iu của em bé</strong>
+            </div>
+            <div class="mini-card">
+              <span class="mini-label">Mood</span>
+              <strong>Sweet & Romantic</strong>
+            </div>
+          </div>
+
+          <div class="countdown-card reveal">
+            <div class="countdown-head">
+              <div>
+                <div class="countdown-title">Đếm ngược đến ngày sinh nhật</div>
+                <p class="countdown-note">Từng giây trôi qua đều đang đưa anh đến gần ngày muốn làm em cười thật nhiều.</p>
+              </div>
+              <span class="countdown-badge">Love timer</span>
+            </div>
+            <div class="countdown" id="countdown">
+              <div class="time-box"><span id="days">00</span><small>Ngày</small></div>
+              <div class="time-box"><span id="hours">00</span><small>Giờ</small></div>
+              <div class="time-box"><span id="minutes">00</span><small>Phút</small></div>
+              <div class="time-box"><span id="seconds">00</span><small>Giây</small></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal delay-1">
+          <div class="hero-photo-card">
+            <div class="hero-photo-label">Our favorite memory</div>
+            <img id="coverImage" src="https://images.unsplash.com/photo-1518199266791-5375a83190b7?auto=format&fit=crop&w=1200&q=80" alt="Ảnh bìa" />
+            <div class="hero-photo-gradient"></div>
+            <div class="hero-photo-caption">
+              <span>Love, softly saved here.</span>
+              <strong>Happy birthday, my girl ✨</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a class="scroll-down" href="#timeline">Cuộn xuống để xem điều bất ngờ ↓</a>
+    </header>
+
+    <main>
+      <section class="music-section container">
+        <div class="section-card music-card reveal">
+          <div>
+            <p class="section-kicker">Nhạc nền</p>
+            <h2 id="musicName">Bản nhạc dành cho em</h2>
+          </div>
+          <button class="btn btn-primary" id="musicToggle">Bật nhạc</button>
+          <audio id="bgMusic" loop preload="auto">
+            <source id="musicSource" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg" />
+          </audio>
+        </div>
+      </section>
+
+      <section class="section container" id="timeline">
+        <div class="section-heading reveal">
+          <span class="section-kicker">Timeline tình yêu</span>
+          <h2>Những điều mình đã đi qua</h2>
+          <p>Một chút đáng yêu, một chút ngọt ngào, và rất nhiều kỷ niệm mà anh muốn giữ lại cho em bé.</p>
+        </div>
+        <div class="timeline" id="timelineList"></div>
+      </section>
+
+      <section class="section container" id="gallery">
+        <div class="section-heading reveal">
+          <span class="section-kicker">Album ảnh</span>
+          <h2>Bất ngờ chưa anh chỉ muốn có hình em bé thoi</h2>
+        </div>
+        <div class="gallery-grid" id="galleryList"></div>
+      </section>
+
+      <section class="section container letter-layout" id="letter">
+        <div class="section-card letter-card reveal">
+          <span class="section-kicker">Thư tay sinh nhật cho em bé</span>
+          <h2 id="letterTitle">Một bức thư thật ngọt dành riêng cho em nhỏ</h2>
+          <p id="letterText"></p>
+          <div class="signature" id="signature">— Anh</div>
+        </div>
+
+        <div class="side-stack">
+          <div class="section-card reveal delay-1">
+            <span class="section-kicker">Vì sao anh yêu cục dàng</span>
+            <h2>Những điều rất đặc biệt ở em iu</h2>
+            <div class="reason-list" id="reasonList"></div>
+          </div>
+
+          <div class="section-card reveal delay-2">
+            <span class="section-kicker">Lời nhắn riêng</span>
+            <h2>Chỉ muốn em pé cười thật nhiều</h2>
+            <div class="sweet-list" id="sweetList"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section container" id="playlist">
+        <div class="section-heading reveal">
+          <span class="section-kicker">Playlist</span>
+          <h2>Những bài hát dành cho ngày đặc biệt</h2>
+        </div>
+        <div class="playlist-grid" id="playlistList"></div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-card reveal">
+        <p class="footer-top">For the prettiest girl</p>
+        <h2 id="footerTitle">Chúc cục cưng một tuổi mới thật hạnh phúc và đầy yêu thương</h2>
+        <p id="footerText">
+          Không chỉ trong ngày sinh nhật, mà cả những ngày rất bình thường sau này nữa, anh vẫn luôn mong em được yêu thương và gặp những điều tốt đẹp nhất.
+        </p>
+        <div class="footer-tags">
+          <span id="footerFrom">Made with love by Anh</span>
+          <span id="footerWish">Happy Birthday Bé Yêu</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
