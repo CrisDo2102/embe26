@@ -21,7 +21,7 @@
     "check:encoding": "node scripts/check-encoding.mjs"
   },
   "dependencies": {
-    "motion": "^12.23.24",
+    "motion": "^14.5.0",
     "next": "16.2.9",
     "react": "19.2.0",
     "react-dom": "19.2.0"
